@@ -1,5 +1,8 @@
+create schema 1928_showroom;
+
 use 1928_showroom;
 
+#CREACION DE TABLAS
 
 #TABLA PARA ALMACENAR LOS DATOS DE LOS CLIENTES
 create table 1928_showroom.clients (
@@ -10,9 +13,9 @@ last_name_client varchar(25) not null, #Apellido del cliente
 email_client varchar(40) not null, #Email del cliente
 birth_date_client datetime not null, #Fecha de nacimiento del cliente
 password_client varchar(15) not null, #Contraseña de la cuenta
-phone_client int not null, #Numero de contacto
+phone_client varchar(40) not null, #Numero de contacto
 adress_client varchar(50) not null, #Direccion para envios
-city_cient varchar(20) not null, #Ciudad para envios
+city_client varchar(20) not null, #Ciudad para envios
 date_account_client date not null, #Dia de creacion de la cuenta
 order_history_client varchar(100) , #Historial de pedidos realizados
 primary key (id_client)
@@ -21,6 +24,7 @@ primary key (id_client)
 #TABLA PARA ALMACENAR TODOS LOS PRODUCTOS A LA VENTA
 create table 1928_showroom.products(
 id_product int auto_increment, #Numero de producto
+type_product varchar(45) not null , #Tipo de producto
 title_product varchar(20) not null, #Titulo del producto
 color_product varchar(20) not null, #Color del producto
 price_product float(2) not null, #Precio del producto
@@ -32,6 +36,9 @@ point_product int, #Puntos que acumula comprar el producto
 description_product varchar(100), #Descripcion del producto
 primary key (id_product)
 );
+
+
+
 
 #TABLA PARA ALMACENAR TODAS LAS ORDENES GENERADAS POR CLIENTES
 create table 1928_showroom.orders(
@@ -99,23 +106,4 @@ primary key(id_turn),
 foreign key (id_client) references 1928_showroom.clients(id_client)
 );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#FIN CREACION DE TABLAS
