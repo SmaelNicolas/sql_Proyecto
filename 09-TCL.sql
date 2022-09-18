@@ -30,8 +30,8 @@ insert into
 		phone_client,
 		adress_client,
 		city_client,
-		date_account_client,
-		order_history_client
+		postal_code_client,
+		date_account_client
 	)
 values
 	(
@@ -44,9 +44,10 @@ values
 		"542914223496",
 		"sarmiento 120",
 		"Bahia Blanca",
-		curdate(),
-		null
+		"8000",
+		curdate()
 	);
+
 
 insert into
 	clients (
@@ -59,8 +60,8 @@ insert into
 		phone_client,
 		adress_client,
 		city_client,
-		date_account_client,
-		order_history_client
+		postal_code_client,
+		date_account_client
 	)
 values
 	(
@@ -73,8 +74,8 @@ values
 		"542249565658",
 		"Peru 210",
 		"Bahia Blanca",
-		curdate(),
-		null
+		"8000",
+		curdate()
 	);
 
 update
@@ -107,8 +108,8 @@ insert into
 		phone_client,
 		adress_client,
 		city_client,
-		date_account_client,
-		order_history_client
+		postal_code_client,
+		date_account_client
 	)
 values
 	(
@@ -121,8 +122,8 @@ values
 		"2345643543",
 		"Salta 432",
 		"Bahia Blanca",
-		curdate(),
-		null
+		"8000",
+		curdate()
 	);
 
 insert into
@@ -136,8 +137,8 @@ insert into
 		phone_client,
 		adress_client,
 		city_client,
-		date_account_client,
-		order_history_client
+		postal_code_client,
+		date_account_client
 	)
 values
 	(
@@ -150,8 +151,8 @@ values
 		"5435346543",
 		"Chile 123",
 		"Bahia Blanca",
-		curdate(),
-		null
+		"8000",
+		curdate()
 	);
 
 insert into
@@ -165,8 +166,8 @@ insert into
 		phone_client,
 		adress_client,
 		city_client,
-		date_account_client,
-		order_history_client
+		postal_code_client,
+		date_account_client
 	)
 values
 	(
@@ -179,8 +180,8 @@ values
 		"65433675654",
 		"Canada 1265",
 		"Bahia Blanca",
-		curdate(),
-		null
+		"8000",
+		curdate()
 	);
 
 insert into
@@ -194,8 +195,8 @@ insert into
 		phone_client,
 		adress_client,
 		city_client,
-		date_account_client,
-		order_history_client
+		postal_code_client,
+		date_account_client
 	)
 values
 	(
@@ -208,8 +209,8 @@ values
 		"5432553256342",
 		"Alvarado 432",
 		"Bahia Blanca",
-		curdate(),
-		null
+		"8000",
+		curdate()
 	);
 
 savepoint save_point_1;
@@ -225,8 +226,8 @@ insert into
 		phone_client,
 		adress_client,
 		city_client,
-		date_account_client,
-		order_history_client
+		postal_code_client,
+		date_account_client
 	)
 values
 	(
@@ -239,8 +240,8 @@ values
 		"543265436756",
 		"Panama 32",
 		"Bahia Blanca",
-		curdate(),
-		null
+		"8000",
+		curdate()
 	);
 
 insert into
@@ -254,8 +255,8 @@ insert into
 		phone_client,
 		adress_client,
 		city_client,
-		date_account_client,
-		order_history_client
+		postal_code_client,
+		date_account_client
 	)
 values
 	(
@@ -268,8 +269,8 @@ values
 		"867458746876",
 		"Alem 5462",
 		"Bahia Blanca",
-		curdate(),
-		null
+		"8000",
+		curdate()
 	);
 
 insert into
@@ -283,8 +284,8 @@ insert into
 		phone_client,
 		adress_client,
 		city_client,
-		date_account_client,
-		order_history_client
+		postal_code_client,
+		date_account_client
 	)
 values
 	(
@@ -297,8 +298,8 @@ values
 		"478464253676",
 		"Cuba 4321",
 		"Bahia Blanca",
-		curdate(),
-		null
+		"8000",
+		curdate()
 	);
 
 insert into
@@ -312,8 +313,8 @@ insert into
 		phone_client,
 		adress_client,
 		city_client,
-		date_account_client,
-		order_history_client
+		postal_code_client,
+		date_account_client
 	)
 values
 	(
@@ -326,8 +327,8 @@ values
 		"87645436543",
 		"Yrigoyen 10",
 		"Bahia Blanca",
-		curdate(),
-		null
+        "8000",
+		curdate()
 	);
 
 savepoint save_point_2;

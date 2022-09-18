@@ -1,5 +1,7 @@
 use 1928_showroom;
 
+#NOTA : Estan todas las funcionas entre un solo delimiter //
+
 delimiter / / 
 
 #Devuelve el id del cliente segun numero de documento 
@@ -82,8 +84,6 @@ create function get_product_stock  (id_entry int)
 
 END ;
 
-
-
 #devuelve el titulo del producto segun id
 create function get_product_name (id_entry int) 
 	returns char(25)
@@ -94,8 +94,6 @@ create function get_product_name (id_entry int)
 		return name_return;
 
 END ;
-
-
 
 #Devuelve el id del talle del producto ingresando el talle
 create function get_size_id  (size_entry char(25)) 
@@ -108,7 +106,6 @@ create function get_size_id  (size_entry char(25))
 
 END ;
 
-
 #Devuelve el nombre del talle del producto ingresando el id
 create function get_size_name  (id_entry int) 
 	returns char(25) 
@@ -119,7 +116,6 @@ create function get_size_name  (id_entry int)
 		return name_return;
 
 END ;
-
 
 #Devuelve el id del tipo del producto ingrensado el tipo
 create function get_type_id  (type_entry int) 

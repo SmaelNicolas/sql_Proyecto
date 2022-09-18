@@ -92,6 +92,7 @@ create table 1928_showroom.discount(
     primary key(id_discount)
 );
 
+
 #TABLA PARA ALMACENAR TODOS LOS PRODUCTOS A LA VENTA
 drop table if exists 1928_showroom.product;
 create table 1928_showroom.product(

@@ -26,8 +26,6 @@ end //
 delimiter ;
 call create_product("remera","Title Test","Test CLR", 9500, "unico", 4, 100 ,"TEST DESCRIPTION" );
 
-select * from product;
-
 #Listado de clients , con su nombre direccion documento y telefono
 drop procedure if exists get_list_clients;                                 
 delimiter //
