@@ -4,6 +4,30 @@ use 1928_showroom;
 ######################################################################
 #INICIO CREACION PROCEDURES
 
+#Crea un cliente completo
+drop procedure if exists create_client;
+delimiter //
+create procedure create_client(in dni int , in name char(15) , in last_name char(25), in email char(40) , in birth_date datetime , in password char(15) , in phone char(40) , in adress char(50) , in city char(25) , in postal_code char(10) , in date_account date)
+begin
+	 insert into 1928_showroom.clients (dni_client,name_client,last_name_client,email_client , birth_date_client , password_client, phone_client , adress_client , city_client ,postal_code_client  , date_account_client) 
+			values (dni , name ,  last_name , email , birth_date , password , phone , adress, city, postal_code , curdate());
+end //
+delimiter ;
+call create_client(35656565 , "test" ,  "ttteest" , "estest.sadi@gmail.com" , "1972-05-06" , "rghj753" , "542914848596" , "testt", "test", "8000" , curdate());
+
+#crea un producto completo
+drop procedure if exists create_product;
+delimiter // 
+create procedure create_product(in type char(10) , in title char(25), in color char(20) , in price float(2) , in size char(10), in stock int , in point int, in description char(254)) 
+begin
+insert into product(type_product,title_product , color_product , price_product , size_product , stock_product , point_product , description_product)
+		values (get_type_id(type), title, color, price, get_size_id(size) , stock, get_points_id(point) ,description );
+end //
+delimiter ;
+call create_product("remera","Title Test","Test CLR", 9500, "unico", 4, 100 ,"TEST DESCRIPTION" );
+
+select * from product;
+
 #Listado de clients , con su nombre direccion documento y telefono
 drop procedure if exists get_list_clients;                                 
 delimiter //
