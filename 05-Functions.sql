@@ -82,6 +82,21 @@ create function get_product_stock  (id_entry int)
 
 END ;
 
+
+
+#devuelve el titulo del producto segun id
+create function get_product_name (id_entry int) 
+	returns char(25)
+    DETERMINISTIC 
+	BEGIN 
+		DECLARE name_return char(25);
+        set name_return = (select title_product from product where id_entry = id_product);
+		return name_return;
+
+END ;
+
+
+
 #Devuelve el id del talle del producto ingresando el talle
 create function get_size_id  (size_entry char(25)) 
 	returns int 
@@ -93,6 +108,7 @@ create function get_size_id  (size_entry char(25))
 
 END ;
 
+
 #Devuelve el nombre del talle del producto ingresando el id
 create function get_size_name  (id_entry int) 
 	returns char(25) 
@@ -103,6 +119,7 @@ create function get_size_name  (id_entry int)
 		return name_return;
 
 END ;
+
 
 #Devuelve el id del tipo del producto ingrensado el tipo
 create function get_type_id  (type_entry int) 
@@ -266,4 +283,15 @@ create function get_payment_method_name  (id_entry int)
 END ;
 
 
-//delimiter;
+#Actualizar stock
+create function update_stock  (quantity int, stock int) 
+	returns int 
+    DETERMINISTIC     
+	BEGIN 
+		DECLARE stock_return int;
+        set stock_return = (stock - quantity) ;
+		return stock_return;
+END ;
+
+// delimiter;
+
